@@ -1,8 +1,8 @@
 ﻿FROM mcr.microsoft.com/dotnet/sdk:6.0-alpine as build
 WORKDIR /app
 COPY . .
-RUN dotnet restore ./DemoCore6API/DemoCore6API.sln
-RUN dotnet publish ./DemoCore6API/DemoCore6API/DemoCore6API.csproj -o /app/published-app
+RUN dotnet restore
+RUN dotnet publish -o /app/published-app
 
 FROM mcr.microsoft.com/dotnet/aspnet:6.0-alpine as runtime
 WORKDIR /app

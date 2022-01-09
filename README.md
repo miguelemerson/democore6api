@@ -12,11 +12,11 @@ docker build -t democore6api .
 docker run -d -p 8085:80 --name demoapi -e ASPNETCORE_ENVIRONMENT='Development'  democore6api
 ```
 Luego abrir http://localhost:8085/swagger/index.html (puerto 8085).
-Esto porque est· configurado en ambiente 'Development'
+Esto porque est√° configurado en ambiente 'Development'
 
-Si no est· activo sÛlo funcionar·: http://localhost:8085/WeatherForecast
+Si no est√° activo s√≥lo funcionar√°: http://localhost:8085/WeatherForecast
 
-La imagen ya est· en Docker Hub, para llamar sin cÛdigo es el siguiente comando:
+La imagen ya est√° en Docker Hub, para llamar sin c√≥digo es el siguiente comando:
 ```
 docker run -d -p 8085:80 --name demoapi -e ASPNETCORE_ENVIRONMENT='Development'  mperedo/democore6api
 ```
@@ -30,13 +30,18 @@ Luego para levantar en Windows ->
 ```
 minikube service demokubeapi
 ```
-En ese instante mostrar· al final una URL (en Windows), algo asÌ como:
+En ese instante mostrar√° al final una URL (en Windows), algo as√≠ como:
 ```
 http://127.0.0.1:64737
 ```
-En este caso 64737 podrÌa variar, asÌ que solo ser· **puerto**
-AsÌ para probar en el navegador debe abrir las siguientes URL:
+En este caso 64737 podr√≠a variar, as√≠ que solo ser√° **puerto**
+As√≠ para probar en el navegador debe abrir las siguientes URL:
 ```
 http://127.0.0.1:**puerto**/swagger/index.html
 http://127.0.0.1:**puerto**/WeatherForecast
 ```
+
+## Pipeline
+
+Se prueban ejecuci√≥n webhooks hacia el local.
+Prueba 1.

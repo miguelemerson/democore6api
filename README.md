@@ -34,9 +34,9 @@ En ese instante mostrará al final una URL (en Windows), algo así como:
 ```
 http://127.0.0.1:64737
 ```
-En este caso 64737 podría variar, así que solo será <puerto>
+En este caso 64737 podría variar, así que solo será **puerto**
 Así para probar en el navegador debe abrir las siguientes URL:
 ```
-http://127.0.0.1:<puerto>/swagger/index.html
-http://127.0.0.1:<puerto>/WeatherForecast
+http://127.0.0.1:**puerto**/swagger/index.html
+http://127.0.0.1:**puerto**/WeatherForecast
 ```

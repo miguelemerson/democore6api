@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: demokubeapi
+  name: demokubeapi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demokubeapi
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: demokubeapi
+    spec:
+      containers:
+      - image: docker.io/mperedo/demoapipipeline
+        name: demokubeapi
+        env:
+        - name: ASPNETCORE_ENVIRONMENT
+          value: "Development"
+        imagePullPolicy: Always
+        resources: {}
+        ports:
+          - containerPort: 80
+status: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: demokubeapi
+  labels:
+    run: demokubeapi
+spec:
+  ports:
+  - port: 8089
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: demokubeapi
+  type: NodePort

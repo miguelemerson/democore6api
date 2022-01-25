@@ -18,7 +18,7 @@ spec:
         app: demokubeapi
     spec:
       containers:
-      - image: docker.io/mperedo/demoapipipeline
+      - image: docker.io/mperedo/demoapipipeline:latest
         name: demokubeapi
         env:
         - name: ASPNETCORE_ENVIRONMENT

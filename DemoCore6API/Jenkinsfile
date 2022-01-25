@@ -13,7 +13,7 @@ git --version'''
         withCredentials(bindings: [
                       string(credentialsId: 'kubernete-jenkis-server-account', variable: 'api_token')
                       ]) {
-            sh 'kubectl --token $api_token --server https://host.docker.internal:53943 --insecure-skip-tls-verify=true apply -f ./DemoCore6API/deploy-jenkins.yml'
+            sh 'kubectl --token $api_token --server https://host.docker.internal:53943 --insecure-skip-tls-verify=true apply -f ./DemoCore6API/deploy-jenkins.yml --force=true'
           }
 
         }

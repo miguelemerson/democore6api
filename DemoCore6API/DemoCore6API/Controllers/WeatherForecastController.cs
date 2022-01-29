@@ -21,11 +21,11 @@ namespace DemoCore6API.Controllers
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
-            return Enumerable.Range(1, 1).Select(index => new WeatherForecast
+            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[0] //Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+                Summary = Summaries[1] //Summary = Summaries[Random.Shared.Next(Summaries.Length)]
             })
             .ToArray();
         }
